@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Button, { colors } from "./button";
+import Button, { colors, variants } from "./button";
 
 const meta = {
   title: "DESIGN SYSTEM/core/button",
@@ -7,12 +7,17 @@ const meta = {
   args: {
     children: "Click me!!!",
     disabled: false,
-    color: "primary"
+    color: "primary",
+    variant: "default"
   },
   argTypes: {
     color: {
       control: "radio",
       options: colors
+    },
+    variant: {
+      control: "radio",
+      options: variants
     }
   }
 } satisfies Meta<typeof Button>;
@@ -37,4 +42,10 @@ export const accent = {
 
 export const disabled = {
   args: { disabled: true }
+} satisfies Story;
+
+export const outlined = {
+  args: {
+    variant: "outlined"
+  }
 } satisfies Story;

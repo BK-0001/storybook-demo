@@ -37,10 +37,19 @@ $shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   &--primary {
+    &.#{$class}--outlined {
+      background-color: white;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+
     background-color: $primary;
 
     &:not(:disabled) {
       &:active {
+        &.#{$class}--outlined {
+          background-color: transparent;
+        }
         background-color: #16978a;
       }
     }
