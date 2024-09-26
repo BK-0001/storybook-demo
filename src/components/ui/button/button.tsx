@@ -7,7 +7,10 @@ type ColorType = (typeof colors)[number];
 export const variants = ["default", "outlined"] as const;
 type VariantType = (typeof variants)[number];
 
-type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> & {
+export type ButtonProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "color"
+> & {
   color?: ColorType;
   variant: VariantType;
 };
