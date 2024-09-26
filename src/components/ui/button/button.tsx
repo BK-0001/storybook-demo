@@ -7,7 +7,7 @@ type ColorType = (typeof colors)[number];
 export const variants = ["default", "outlined"] as const;
 type VariantType = (typeof variants)[number];
 
-type Props = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> & {
+type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> & {
   color?: ColorType;
   variant: VariantType;
 };
@@ -20,7 +20,7 @@ export default function Button({
   children,
   variant = "default",
   ...rest
-}: Props) {
+}: ButtonProps) {
   const classes = [
     BASE_CLASS,
     `${BASE_CLASS}--${color}`,
