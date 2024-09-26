@@ -21,8 +21,20 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const storyOne = {} satisfies Story;
-export const storyTwo = {} satisfies Story;
+export const primary = {} satisfies Story;
+
+export const secondary = {
+  args: {
+    color: "secondary"
+  }
+} satisfies Story;
+
+export const accent = {
+  args: {
+    color: "accent"
+  }
+} satisfies Story;
+
 export const disabled = {
   args: { disabled: true }
 } satisfies Story;

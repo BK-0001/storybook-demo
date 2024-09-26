@@ -38,13 +38,31 @@ $shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   &--primary {
     background-color: $primary;
+
+    &:not(:disabled) {
+      &:active {
+        background-color: #16978a;
+      }
+    }
   }
 
   &--secondary {
     background-color: $secondary;
+
+    &:not(:disabled) {
+      &:active {
+        background-color: #bf7712;
+      }
+    }
   }
 
   &--accent {
     background-color: $accent;
+
+    &:not(:disabled) {
+      &:active {
+        background-color: #5d3fd3;
+      }
+    }
   }
 }
