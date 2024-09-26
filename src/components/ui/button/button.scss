@@ -1,0 +1,50 @@
+$class: ds-button;
+
+$primary: #2ec4b6;
+$secondary: #ff9f1c;
+$accent: #5d3fd3;
+$white: white;
+$shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+.#{$class} {
+  border: none;
+  background-color: $primary;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: $shadow;
+
+  &:not(:disabled) {
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      background-color: #1daa9c;
+      transform: translateY(1px);
+      box-shadow: none;
+    }
+  }
+
+  &:disabled {
+    background-color: #cecece;
+    color: #adadad;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--secondary {
+    background-color: $secondary;
+  }
+
+  &--accent {
+    background-color: $accent;
+  }
+}
